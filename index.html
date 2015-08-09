@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+<title>Workout Generator</title>
+</head>
+<body>
+<h1>Workout Generator</h1>
+
+<h2>Strength</h2>
+<p><i>Reps x Sets</i></p>
+<ul><li id="strength"></li></ul>
+
+<h2>Conditioning</h2>
+<p><i>As many rounds, 16 minutes</i></p>
+<ul id="conditioning"></ul>
+
+<script type="text/javascript">
+
+//Via http://stackoverflow.com/questions/500606/javascript-array-delete-elements
+// Array Remove - By John Resig (MIT Licensed)
+Array.prototype.remove = function(from, to) {
+  var rest = this.slice((to || from) + 1 || this.length);
+  this.length = from < 0 ? this.length + from : from;
+  return this.push.apply(this, rest);
+};
+
+var strengthOptions = [
+	"Squat 5x3",
+	"Squat 8x1",
+	"Squat - Work up to 1RM",
+	"Deadlift 5x1",
+	"Deadlift 2x4",
+	"Deadlift - Work up to 1RM",
+	"Seated strict press 5x3",
+	"Cleans - 5x3"
+];
+
+var conditioningOptions = [
+	"KB Swings",
+	"Burpees",
+	"Pushups",
+	"Situps",
+	"Double-Unders"
+]
+
+var rand = Math.random();
+
+var strength = strengthOptions[Math.floor(rand * strengthOptions.length)];
+document.getElementById("strength").innerText = strength;
+
+var conditioning = "";
+for(var i = 0; i < 3; i++) {
+	rand = Math.random();
+	var index = Math.floor(rand * conditioningOptions.length);
+	//splice removes the element from the oripinal array and returns the removed element(s)
+	conditioning = conditioning + "<li>" + conditioningOptions.splice(index,1); + "</li>";
+	//conditioningOptions = conditioningOptions.remove(index);
+	//conditioningOptions = 
+	
+
+}
+document.getElementById("conditioning").innerHTML = conditioning;
+</script>
+</body>
+</html>
