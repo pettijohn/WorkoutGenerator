@@ -15,31 +15,39 @@
 
 <script type="text/javascript">
 
-//Via http://stackoverflow.com/questions/500606/javascript-array-delete-elements
-// Array Remove - By John Resig (MIT Licensed)
-Array.prototype.remove = function(from, to) {
-  var rest = this.slice((to || from) + 1 || this.length);
-  this.length = from < 0 ? this.length + from : from;
-  return this.push.apply(this, rest);
-};
-
 var strengthOptions = [
-	"Squat 5x3",
-	"Squat 8x1",
-	"Squat - Work up to 1RM",
-	"Deadlift 5x1",
-	"Deadlift 2x4",
-	"Deadlift - Work up to 1RM",
-	"Seated strict press 5x3",
-	"Cleans - 5x3"
+	"Back Squat",
+	"Front Squat",
+	"Deadlift",
+	"Bent-Over Row",
+	"Seated Strict Press",
+	"Cleans",
+	"Sumo Deadlift",
+	"Sumo Deadlift High Pull",
+	"Hang Clean",
+	"Good Mornings"
 ];
 
 var conditioningOptions = [
-	"KB Swings",
+	"Kettlebell Swings",
 	"Burpees",
 	"Pushups",
 	"Situps",
-	"Double-Unders"
+	"Double-Unders",
+	"Plank 1 Minute",
+	"Strict Pull Ups",
+	"Strict Chin Ups",
+	"Kettlebell Cleans",
+	"Air Squats",
+	"Kettlebell Goblet Squat",
+	"Kettlebell High Pull",
+	"Kettlebell Lunge Press",
+	"Lunges",
+	"Kettlebell Russsian Twist",
+	"Kettlebell Single-Arm Floor Press",
+	"Overhead plate 100m Walk",
+	"100m Run",
+	"Mountain Climber"
 ]
 
 var rand = Math.random();
